@@ -1,8 +1,12 @@
-<div class="finder">
-    {{$ctrl.currentWord.name}} - {{$ctrl.currentWord.translation}}
-<br/>
+<div class="myTable">
+    <table >
+        <tr ng-repeat="word in $ctrl.currentWord">
+            <td style="text-align:left;padding-right:5px">{{word.name}}</td>
+            <td>{{word.translation}}</td>
+        </tr>
+    </table>
     <br/>
-    <button ng-click="$ctrl.newWord()">новое слово
+    <br/>
+    <button ng-click="$ctrl.setNewWord()">новые слова
     </button>
 </div>
-
